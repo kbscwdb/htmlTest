@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1,minimum-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>大雁发房</title>
+    <style>
+        html{
+            color: #000;
+        }
+        p{
+            margin: 0;
+            font-size: 14px;
+        }
+        .wrapper{
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 14px 12px 1rem;
+        }
+        .bf{
+            background-color: #ddd;
+            animation: move-bar 3s linear 0s infinite alternate;
+        }
+        @keyframes move-bar{
+            from{
+                background-color: #ddd;
+            }
+            to{
+                background-color: #ccc;
+            }
+        }
+
+        .fr{
+            float: right;
+        }
+        .fl{
+            float: left;
+        }
+
+        #topTitle{
+            padding-left: 2.2rem;
+            position: relative;
+            min-height: 2rem;
+        }
+        .coverImg{
+            width: 2rem;
+            height: 2rem;
+            border-radius: 8px;
+            position: absolute;
+            left: 0;
+        }
+        .title{
+            line-height: 0.56rem;
+        }
+        .topTitle-right{
+            width: 4.8rem;
+        }
+        .userInfo{
+            position: relative;
+            padding-left: 0.7rem;
+        }
+        .userInfo-avatar{
+            height: 0.56rem;
+            width: 0.56rem;
+            border-radius: 50%;
+            position: absolute;
+            left: 0;
+        }
+        .userInfo-text{
+            line-height: 0.56rem;
+        }
+        #mianInfo{
+            display: flex;
+            justify-content: space-around;
+        }
+        #mianInfo .bf{
+            height: 0.30rem;
+            width: 1rem;
+            margin-bottom: 0.2rem;
+        }
+        /* .mianInfo div{
+            min-width: 25%;
+        } */
+        #mianInfo .colorText{
+            font-size: 0.32rem;
+            background:linear-gradient(46deg, rgba(0,122,255,1) 0%, rgba(226,58,245,1) 100%);
+            -webkit-background-clip:text;
+            -webkit-text-fill-color:transparent;
+            line-height: 0.56rem;
+        }
+        #mianInfo p:last-child{
+            color: #8E8E93;
+        }
+
+        #imageWrapper{
+            overflow-x: auto;
+            width: 100%;
+            display: flex;
+        }
+
+        #imageWrapper .bf{
+            width: 5.6rem;
+            border-radius:10px;
+        }
+        #imageWrapper>*{
+            height: 4.2rem;
+            flex-shrink:0;
+        }
+        #imageWrapper>*+*{
+            margin-left: 12px;
+        }
+
+        #baseInfo{
+            margin-top: 0.4rem;
+            border-top: 1px solid #EFEFF4;
+            padding-top: 0.2rem;
+            display: flex;
+            flex-wrap: wrap
+        }
+        #baseInfo div{
+            width: 48%;
+            line-height: 0.56rem;
+            /* flex-shrink:0; */
+        }
+        #baseInfo .bf{
+            height: 0.28rem;
+            display: inline-block;
+        }
+        #baseInfo .bf:first-child{
+            width: 0.56rem;
+        }
+        #baseInfo .bf:last-child{
+            width: 1.2rem;
+        }
+
+        #gotoPublish{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 1rem;
+        }
+        #gotoPublish .bf{
+            height: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <section id="topTitle">
+            <div class="bf coverImg fl"></div>
+            <div class="topTitle-right">
+                <p class="bf title" style="margin-bottom: 8px;height: 0.4rem;"></p>
+                <p class="bf title" style="margin-bottom: 20px;height: 0.4rem;"></p>
+                <div class="fr userInfo">
+                    <div class="bf userInfo-avatar"></div>
+                    <p class="bf userInfo-text" style="width: 2.4rem;height: 0.4rem;
+                    margin-top: 0.08rem;"></p>
+                </div>
+            </div>
+        </section>
+        <section id="mianInfo">
+            <div>
+                <p class="bf"></p>
+                <p class="bf"></p>
+            </div>
+            <div>
+                <p class="bf"></p>
+                <p class="bf"></p>
+            </div>
+            <div>
+                <p class="bf"></p>
+                <p class="bf"></p>
+            </div>
+        </section>
+        <section id="imageWrapper">
+            <div class="bf"></div>
+            <div class="bf"></div>
+            <div class="bf"></div>
+            <div class="bf"></div>
+        </section>
+        <section id="baseInfo">
+            <div>
+                <span class="bf"></span>
+                <span class="bf"></span>
+            </div>
+            <div>
+                <span class="bf"></span>
+                <span class="bf"></span>
+            </div>
+            <div>
+                <span class="bf"></span>
+                <span class="bf"></span>
+            </div>
+            <div>
+                <span class="bf"></span>
+                <span class="bf"></span>
+            </div>
+            <div>
+                <span class="bf"></span>
+                <span class="bf"></span>
+            </div>
+            <div>
+                <span class="bf"></span>
+                <span class="bf"></span>
+            </div>
+            <div>
+                <span class="bf"></span>
+                <span class="bf"></span>
+            </div>
+            <div>
+                <span class="bf"></span>
+                <span class="bf"></span>
+            </div>
+        </section>
+        <section id="gotoPublish">
+            <div class="bf"></div>
+        </section>
+    </div>
+    <script>
+        window.onload=function(){
+            document.getElementsByTagName('html')[0].style.fontSize = window.innerWidth / 375 * 50 + 'px';
+            // request("http://yan-beta.fangline.cn/api/user/user/add-user-action.json",{
+            //     "content-type" : "application/json",
+            // })
+        }
+        request("http://yan-beta.fangline.cn/api/publish/get-publish-forward-detail.json",{
+            method:"POST",
+            body:`publishId:1413175`,
+            mode: "no-cors",
+            "content-type": "application/x-www-form-urlencoded"
+        }).then(res=>{
+            console.log(res);
+        })
+        function request(url, option={method:"POST"}){
+            return fetch(url, option).then(res=>res.json());
+        }
+    </script>
+</body>
+</html>
