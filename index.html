@@ -1,19 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1,minimum-scale=1, user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>大雁发房</title>
     <style>
-        html{
+        html {
             color: #000;
         }
-        p{
+
+        p {
             margin: 0;
             font-size: 14px;
         }
-        .wrapper{
+
+        #wrapper {
             position: fixed;
             top: 0;
             bottom: 0;
@@ -21,167 +24,196 @@
             right: 0;
             padding: 14px 12px 1rem;
         }
-        .bf{
+
+        .bf {
             background-color: #ddd;
             animation: move-bar 3s linear 0s infinite alternate;
         }
-        @keyframes move-bar{
-            from{
+
+        @keyframes move-bar {
+            from {
                 background-color: #ddd;
             }
-            to{
+
+            to {
                 background-color: #ccc;
             }
         }
 
-        .fr{
+        .fr {
             float: right;
         }
-        .fl{
+
+        .fl {
             float: left;
         }
 
-        #topTitle{
+        #topTitle {
             padding-left: 2.2rem;
             position: relative;
             min-height: 2rem;
+            margin-bottom: 0.2rem;
         }
-        .coverImg{
+
+        .coverImg {
             width: 2rem;
             height: 2rem;
             border-radius: 8px;
             position: absolute;
             left: 0;
+            overflow: hidden;
+            border:1px solid rgba(151,151,151,1);
         }
-        .title{
+
+        .title {
             line-height: 0.56rem;
         }
-        .topTitle-right{
+
+        .topTitle-right {
             width: 4.8rem;
         }
-        .userInfo{
+
+        .userInfo {
             position: relative;
             padding-left: 0.7rem;
+            margin-top: 0.2rem;
         }
-        .userInfo-avatar{
+
+        .userInfo-avatar {
             height: 0.56rem;
             width: 0.56rem;
             border-radius: 50%;
             position: absolute;
             left: 0;
         }
-        .userInfo-text{
+
+        .userInfo-text {
             line-height: 0.56rem;
         }
-        #mianInfo{
+
+        #mianInfo {
             display: flex;
             justify-content: space-around;
+            margin-bottom: 0.2rem;
         }
-        #mianInfo .bf{
+
+        #mianInfo .bf {
             height: 0.30rem;
             width: 1rem;
             margin-bottom: 0.2rem;
         }
+
         /* .mianInfo div{
             min-width: 25%;
         } */
-        #mianInfo .colorText{
+        #mianInfo .colorText {
             font-size: 0.32rem;
-            background:linear-gradient(46deg, rgba(0,122,255,1) 0%, rgba(226,58,245,1) 100%);
-            -webkit-background-clip:text;
-            -webkit-text-fill-color:transparent;
+            background: linear-gradient(46deg, rgba(0, 122, 255, 1) 0%, rgba(226, 58, 245, 1) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
             line-height: 0.56rem;
         }
-        #mianInfo p:last-child{
+
+        #mianInfo p:last-child {
             color: #8E8E93;
         }
 
-        #imageWrapper{
+        #imageWrapper {
             overflow-x: auto;
             width: 100%;
             display: flex;
+            margin-bottom: 0.4rem;
         }
 
-        #imageWrapper .bf{
+        #imageWrapper .bf {
             width: 5.6rem;
-            border-radius:10px;
         }
-        #imageWrapper>*{
+
+        #imageWrapper>* {
             height: 4.2rem;
-            flex-shrink:0;
+            flex-shrink: 0;
+            border-radius: 10px;
         }
-        #imageWrapper>*+*{
+
+        #imageWrapper>*+* {
             margin-left: 12px;
         }
 
-        #baseInfo{
-            margin-top: 0.4rem;
+        #baseInfo {
             border-top: 1px solid #EFEFF4;
             padding-top: 0.2rem;
             display: flex;
             flex-wrap: wrap
         }
-        #baseInfo div{
+
+        #baseInfo div {
             width: 48%;
             line-height: 0.56rem;
             /* flex-shrink:0; */
         }
-        #baseInfo .bf{
+
+        #baseInfo .bf {
             height: 0.28rem;
             display: inline-block;
         }
-        #baseInfo .bf:first-child{
+
+        #baseInfo .bf:first-child {
             width: 0.56rem;
+            margin-right: 0.2rem;
         }
-        #baseInfo .bf:last-child{
+
+        #baseInfo .bf:last-child {
             width: 1.2rem;
         }
 
-        #gotoPublish{
+        #gotoPublish {
             position: absolute;
             bottom: 0;
             left: 0;
             right: 0;
             height: 1rem;
         }
-        #gotoPublish .bf{
+
+        #gotoPublish .bf {
             height: 1rem;
         }
     </style>
+    <!-- <script src="./data.js"></script> -->
 </head>
+
 <body>
-    <div class="wrapper">
+    <div id="wrapper">
         <section id="topTitle">
-            <div class="bf coverImg fl"></div>
+            <div class="coverImg fl">
+                <img height="100%" alt="" src="https://file.fangline.cn/yan/test/miaolu_image/img1553765485351023913207312774656.jpg?x-oss-process=image/format,jpg"/>
+            </div>
             <div class="topTitle-right">
-                <p class="bf title" style="margin-bottom: 8px;height: 0.4rem;"></p>
-                <p class="bf title" style="margin-bottom: 20px;height: 0.4rem;"></p>
+                <p class="title">押一付一 越湖家天下精装两室，包物业包车位，出门地铁口</p>
                 <div class="fr userInfo">
-                    <div class="bf userInfo-avatar"></div>
-                    <p class="bf userInfo-text" style="width: 2.4rem;height: 0.4rem;
-                    margin-top: 0.08rem;"></p>
+                    <img height="100%" class="userInfo-avatar" alt="" src="https://file.fangline.cn/yan/test/miaolu_image/img1553765485351023913207312774656.jpg?x-oss-process=image/format,jpg"/>
+
+                    <p class="userInfo-text">该房源由张三张三张三张三共享</p>
                 </div>
             </div>
         </section>
         <section id="mianInfo">
             <div>
-                <p class="bf"></p>
-                <p class="bf"></p>
+                <p class="colorText">175万</p>
+                <p>售价</p>
             </div>
             <div>
-                <p class="bf"></p>
-                <p class="bf"></p>
+                <p class="colorText">2室1厅1卫</p>
+                <p>户型</p>
             </div>
             <div>
-                <p class="bf"></p>
-                <p class="bf"></p>
+                <p class="colorText">100㎡</p>
+                <p>面积</p>
             </div>
         </section>
         <section id="imageWrapper">
-            <div class="bf"></div>
-            <div class="bf"></div>
-            <div class="bf"></div>
-            <div class="bf"></div>
+            <img height="100%" alt="" src="https://file.fangline.cn/yan/test/miaolu_image/img1553765485499016791612136122216.jpg?x-oss-process=image/format,jpg" />
+            <img height="100%" alt="" src="https://file.fangline.cn/yan/test/miaolu_image/img1553765485499016791612136122216.jpg?x-oss-process=image/format,jpg" />
+            <img height="100%" alt="" src="https://file.fangline.cn/yan/test/miaolu_image/img1553765485499016791612136122216.jpg?x-oss-process=image/format,jpg" />
         </section>
         <section id="baseInfo">
             <div>
@@ -222,23 +254,70 @@
         </section>
     </div>
     <script>
-        window.onload=function(){
+        window.onload = function () {
+            let $wrapper = document.getElementById("wrapper");
+            let baseHTML = `<section id="topTitle"><div class="bf coverImg fl"></div><div class="topTitle-right"><p class="bf title" style="margin-bottom: 0.1rem;height: 0.4rem;"></p><p class="bf title" style="height: 0.4rem;"></p><div class="fr userInfo"><div class="bf userInfo-avatar"></div><p class="bf userInfo-text" style="width: 2.4rem;height: 0.4rem;margin-top: 0.08rem;"></p></div></div></section><section id="mianInfo"><div><p class="bf"></p><p class="bf"></p></div><div><p class="bf"></p><p class="bf"></p></div><div><p class="bf"></p><p class="bf"></p></div></section><section id="imageWrapper"><div class="bf"></div><div class="bf"></div><div class="bf"></div><div class="bf"></div></section><section id="baseInfo"><div><span class="bf"></span><span class="bf"></span></div><div><span class="bf"></span><span class="bf"></span></div><div><span class="bf"></span><span class="bf"></span></div><div><span class="bf"></span><span class="bf"></span></div><div><span class="bf"></span><span class="bf"></span></div><div><span class="bf"></span><span class="bf"></span></div><div><span class="bf"></span><span class="bf"></span></div><div><span class="bf"></span><span class="bf"></span></div></section><section id="gotoPublish"><div class="bf"></div></section>`;
             document.getElementsByTagName('html')[0].style.fontSize = window.innerWidth / 375 * 50 + 'px';
+            // $wrapper.innerHTML = baseHTML;
             // request("http://yan-beta.fangline.cn/api/user/user/add-user-action.json",{
             //     "content-type" : "application/json",
             // })
+            getPublishDetail().then(res => {
+                if (res && res.ok) {
+                    let {
+                        houseImg = "", title = "", userName = "", publishImgList = [],
+                        price = "", room = "", hall = "", toilet = "", area = "",
+                        floor = "", totalFloor = "", towards = "", struct = "", haveElevator = "",
+                        houseType = "", decoration = "", buildYear = "", propertyYears = ""
+                    } = res.forwardDetail;
+                    let imgWrap = publishImgList.reduce((a, b) => {
+                        if (b.imgType !== 5) {
+                            return a + `<img alt="" src=${OSSImageProcess(b.url, Math.floor(window.innerWidth / 375*210))}/>`;
+                        }
+                    }, "")
+                }
+            })
         }
-        request("https://yan-beta.fangline.cn/api/publish/get-publish-forward-detail.json",{
-            method:"POST",
-            body:`publishId:1413175`,
-            mode: "no-cors",
-            "content-type": "application/x-www-form-urlencoded"
-        }).then(res=>{
+        function OSSImageProcess(url, minLength = 180) {
+            if (typeof url !== "string") return url;
+            if (url.indexOf(".fangline.") === -1) return url;
+            let ind = url.indexOf("?x-oss-process");
+            if (ind !== -1) {
+                if (url.indexOf("image/resize") === -1) {
+                    if (url.indexOf("image/format,jpg") === -1) {
+                        return url;
+                    } else {
+                        return url.replace("image/format,jpg", `image/format,jpg/resize,h_${minLength}`);
+                    }
+                } else {
+                    return url.replace(/\?x-oss-process=.+$/, `?x-oss-process=image/resize,h_${minLength}`);
+                }
+            }
+            return url + `?x-oss-process=image/resize,h_${minLength}`;
+        }
+        function getPublishDetail() {
+            return new Promise((res, rej) => {
+                setTimeout(() => {
+                    return res(data);
+                }, 2000)
+            })
+        }
+        fetch("http://yan-beta.fangline.cn/api/publish/get-publish-forward-detail.json?publishId=1413175", {
+            method: "POST",
+            // body: `publishId=1413175`,
+            mode: "cors",
+            headers: {
+                // "content-type": "application/x-www-form-urlencoded",
+                // // 'Access-Control-Allow-Origin': '*',
+                // Accept:"application/json, text/plain, */*",
+                // "Cache-Control":"no-cache"
+            },
+            credentials: 'include',
+        }).then(res => {
             console.log(res);
         })
-        function request(url, option={method:"POST"}){
-            return fetch(url, option).then(res=>res.json());
-        }
+
     </script>
 </body>
+
 </html>
